@@ -1,0 +1,801 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY kigo "Kigo">
+  <!ENTITY kappname "&kigo;">
+  <!ENTITY package "kdegames"
+><!-- kdebase, kdeadmin, etc.  Leave
+                                     this unchanged if your
+                                     application is not maintained in KDE CVS -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Spanish "INCLUDE">
+]>
+<!-- ................................................................ -->
+
+<book id="kigo" lang="&language;">
+<bookinfo>
+<title
+>Manual de &kigo;</title>
+
+<authorgroup>
+	<author
+><firstname
+></firstname
+> <surname
+>Sascha Peilicke</surname
+> <affiliation
+> <address
+>sasch.pe@gmx.de</address>
+		</affiliation>
+	</author>
+	<othercredit role="translator"
+><firstname
+>Rocío</firstname
+><surname
+>Gallego</surname
+><affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+><contrib
+>Traducción</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Kira</firstname
+><surname
+>J. Fernández</surname
+><affiliation
+><address
+><email
+>kirajfdez@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traductora</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+	<year
+>2008-2010</year>
+	<holder
+>Sascha Peilicke</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2013-05-06</date>
+<releaseinfo
+>0.5.6 (&kde; 4.11)</releaseinfo>
+
+<abstract>
+	<para
+>&kigo; es una implementación de código abierto del popular juego «Go» (también conocido como Weiqi).</para>
+</abstract>
+<keywordset>
+	<keyword
+>KDE</keyword>
+	<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+	<keyword
+>juego</keyword
+> <!-- do not change this! -->
+	<keyword
+>kigo</keyword
+><!--Application name goes here-->
+<!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<keyword
+>lógica</keyword>
+	<keyword
+>tablero</keyword>
+<!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+	<keyword
+>un jugador</keyword>
+	<keyword
+>dos jugadores</keyword>
+</keywordset>
+</bookinfo>
+
+<!-- The contents of the documentation begin here.  Label
+each chapter so with the id attribute. This is necessary for two reasons: it
+allows you to easily reference the chapter from other chapters of your
+document, and if there is no ID, the name of the generated HTML files will vary
+from time to time making it hard to manage for maintainers and for the CVS
+system. Any chapter labelled (OPTIONAL) may be left out at the author's
+discretion. Other chapters should not be left out in order to maintain a
+consistent documentation style across all KDE apps. -->
+
+<chapter id="introduction">
+    <title
+>Introducción</title>
+	<note
+><title
+>Tipo de juego:</title
+><para
+>Lógica, Tablero</para
+></note
+><!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<note
+><title
+>Número de jugadores posibles:</title
+><para
+>Dos</para
+></note
+><!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+	<para
+>&kigo; es una implementación de código abierto del popular juego «Go» (también conocido como Weiqi).</para>
+	<para
+>Go es un juego de estrategia para dos jugadores. También se le conoce como igo (japonés), weiqi o wei ch'i (chino) o baduk (coreano). Go tiene fama de ser muy rico en complejidad estratégica, a pesar de sus sencillas reglas. </para>
+
+	<para
+>El juego se juega entre dos jugadores que alternativamente colocan «piedras» (piezas del juego, ahora normalmente hechas de cristal o de plástico) en las intersecciones libres de una rejilla de 19x19 líneas (o de 9x9, o de 13x13 líneas en versiones más fáciles). </para>
+<!-- The introduction chapter contains a brief introduction for the
+application that explains what it does and where to report
+problems. Basically a long version of the abstract.  Don't include a
+revision history. (see installation appendix comment) -->
+</chapter>
+
+<chapter id="howto">
+    <title
+>Cómo jugar</title
+> <!-- do not change this! -->
+<!--IMPORTANT: If the game has no defined objective, please remove the below line.-->
+	<note
+><title
+>Objetivo:</title>
+	<para
+>El objetivo del juego es controlar una porción del tablero mayor que la del oponente. Una piedra o grupo de piedras es capturada y eliminada si no tiene intersecciones adyacentes vacías, resultado de haber sido completamente rodeada por piedras del color opuesto.</para
+></note
+><!--Describe the objective of the game.-->
+    <sect1 id="starting">
+    <title
+>Comenzar un juego</title>
+<!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
+	<para
+>Cuando inicia &kappname; tiene dos opciones para jugar al maravilloso juego del Go. Puede empezar un juego nuevo o continuar uno anterior.</para>
+
+    <sect2 id="new_game">
+    <title
+>Configurar un juego nuevo</title>
+      <para
+>Cuando inicia &kappname;, debería ver una pantalla similar a la que se muestra en la captura de abajo. Ahí puede configurar tanto el nombre de los jugadores de blancas y de negras y el tamaño del tablero. Puede decidir si uno o los dos jugadores deberían ser una máquina. Si decide jugar contra una máquina puede también seleccionar su fuerza. Si quiere comenzar el juego puede seleccionar <guimenuitem
+>Comenzar juego</guimenuitem
+> del menú <guimenu
+>Juego</guimenu
+>, hacer click en <guibutton
+>Comenzar juego</guibutton
+> en el widget <quote
+>Configuración del juego</quote
+> de la barra de tareas, o simplemente presionando la tecla <keycap
+>S</keycap
+>. </para>
+      <screenshot>
+      <screeninfo
+>Pantalla de juego nuevo</screeninfo>
+      <mediaobject>
+      <imageobject
+><imagedata format="PNG" fileref="start-new-game.png"/></imageobject>
+      <textobject
+><phrase
+>Pantalla de juego nuevo</phrase
+></textobject>
+      </mediaobject>
+      </screenshot>
+     </sect2>
+     <sect2 id="load_game">
+     <title
+>Configurar un juego cargado</title>
+      <para
+>Si decide continuar un juego previo sin finalizar, puede simplemente elegir la opción <guimenuitem
+>Cargar...</guimenuitem
+> en el menú <guimenu
+>Juego</guimenu
+> (el menú se muestra en la captura de pantalla de arriba). Debería aparecer un selector de archivos; úselo para seleccionar y cargar el juego deseado. </para>
+
+      <para
+>Ahora debería ver una pantalla similar a la que se muestra en la captura de abajo. Si no desea continuar con el último movimiento hecho, puede revertir tantos movimientos como quiera. Debería ver cambiar el tablero a medida que varía el número actual de movimientos. La pantalla de configuración también presenta mucha información adicional sobre el juego guardado. </para>
+
+      <para
+>Simplemente presione <guibutton
+>Comenzar juego</guibutton
+> para continuar. </para>
+      <screenshot>
+      <screeninfo
+>Pantalla de juego cargado</screeninfo>
+      <mediaobject>
+      <imageobject
+><imagedata format="PNG" fileref="start-loaded-game.png"/></imageobject>
+      <textobject
+><phrase
+>Pantalla de juego cargado.</phrase
+></textobject>
+      </mediaobject>
+      </screenshot>
+
+      <para
+>Existe también la opción de descargar de internet juegos históricos del Go o juegos guardados por otros usuarios. Simplemente haga click en <guimenuitem
+>Obtener más juegos...</guimenuitem
+> en el menú <guimenu
+>Juego</guimenu
+>. Debería ver un diálogo que le permite elegir qué contenido descargar. </para>
+      <screenshot>
+      <screeninfo
+>Obtener juegos nuevos</screeninfo>
+      <mediaobject>
+      <imageobject
+><imagedata format="PNG"
+fileref="get-new-games.png"/></imageobject>
+      <textobject
+><phrase
+>Pantalla «obtener nuevos juegos»</phrase
+></textobject>
+      </mediaobject>
+      </screenshot>
+     </sect2>
+    </sect1>
+
+    <sect1 id="playing">
+    <title
+>Jugando un juego</title>
+      <para
+>Ahora usted está preparado para jugar su primera mando de Go. Si no está familiarizado con las reglas, le recomendamos leer el correspondiente <ulink url="http://es.wikipedia.org/wiki/Go"
+> artículo de Wikipedia</ulink
+> o seguir <ulink url="http://playgo.to/interactive/"
+>El camino interactivo del Go</ulink
+> de Hiroki Mori. </para>
+
+      <para
+>Hacer un movimiento es sencillo. Solo haga click en una de las intersecciones del tablero de Go. Debería ver un pequeño punto negro que le muestra dónde caerá la piedra si hace click. </para>
+
+      <para
+>El jugador actual viene determinado por el cursor, que cambia a una piedra blanca o negra dependiendo de qué jugador viene después. </para>
+
+      <para
+>También puede comprobar la información del juego que le muestra también el movimiento anterior y algunas estadísticas. Hay disponible además un completo historial de movimientos. Si desea recordar en qué orden se han colocado las piedras sobre el tablero, haga click en el botón <guibutton
+>Mostrar números de movimiento</guibutton
+>. Si cree que no puede ganar nada colocando otra piedra, haga click en <guibutton
+>Pasar movimiento</guibutton
+> y deje que su oponente juegue su turno. Si ambos jugadores pasan, el juego puede terminar. ¡Pero fíjese en que terminar un juego de Go es siempre un paso cooperativo! </para>
+      <screenshot>
+      <screeninfo
+>Jugar un juego nuevo</screeninfo>
+      <mediaobject>
+      <imageobject
+><imagedata format="PNG" fileref="play-game.png"/></imageobject>
+      <textobject
+><phrase
+>Jugar un juego nuevo</phrase
+></textobject>
+      </mediaobject>
+      </screenshot>
+      <para
+>Tenga en cuenta que usted puede guardar el juego actual en cualquier momento. Haga esto entrando en el menú <guimenu
+>Juego</guimenu
+> y eligiendo la opción <guimenuitem
+>Guardar</guimenuitem
+>. </para>
+
+	<sect2 id="hint">
+	<title
+>Obteniendo una pista</title>
+	<para
+>A veces es difícil decidir qué movimiento hacer. Si desea que la máquina le dé una pequeña pista, presione el botón <guibutton
+>Pista</guibutton
+> que se muestra en la captura de abajo. Ahora deberían aparecer unas piedras transparentes con un número encima. Estas son sus recomendaciones, con una puntuación que determina lo bueno que es el movimiento. Siéntase libre de hacer click en cualquiera de los movimientos recomendados o en cualquier otro espacio libre para colocar su próxima piedra. </para>
+      <screenshot>
+      <screeninfo
+>Obteniendo una pista</screeninfo>
+      <mediaobject>
+      <imageobject
+><imagedata format="PNG" fileref="hint.png"/></imageobject>
+      <textobject
+><phrase
+>Obteniendo una pista</phrase
+></textobject>
+      </mediaobject>
+      </screenshot>
+      </sect2>
+      </sect1>
+
+      <sect1 id="strattips">
+      <title
+>Estrategias y consejos</title>
+      <itemizedlist>
+      <listitem
+><para
+>El Go consiste más en rodear un territorio (espacio vacío) que en capturar las piezas de su oponente.</para
+></listitem>
+      <listitem
+><para
+>Es más fácil rodear un territorio cerca de las esquinas (en dos lados), después cerca de los bordes (en tres lados) y finalmente en el centro.</para
+></listitem>
+      <listitem
+><para
+>Al principio del juego, coloque sus piezas de un modo disperso. Solo construya sus fronteras cuando su oponente empiece a entrometerse.</para
+></listitem>
+      <listitem
+><para
+>No juegue con piedras sin apoyo cercanas a las de su oponente cuando usted ataque. Tenderán a ser capturadas, y GnuGo es muy bueno en eso. A menudo es mejor atacar indirectamente.</para
+></listitem>
+      <listitem
+><para
+>Para evitar la captura, un grupo de piedras debe tener dos <quote
+>ojos</quote
+> o ser capaz de hacerlos si se le ataca. Los <quote
+>ojos</quote
+> son espacios desconectados. Piense en un donut con dos agujeros. Su oponente puede rodear el exterior, pero no puede rellenar los dos agujeros a la vez.</para
+></listitem>
+      <listitem
+><para
+>En un tablero de 19x19 típicamente hay varios territorios que están siendo creados, atacados o defendidos. Usted tendrá que librar varias batallas simultáneamente. La estrategia incluye evaluar las fuerzas y debilidades de varias áreas y asignar sus movimientos entre ellas. ¿Es mejor atacar aquí o defender allí?</para
+></listitem>
+      <listitem
+><para
+>Conforme se va llenando el tablero y se aproxima el final del juego, jugar más de cerca se vuelve importante, desgastando las fronteras de su oponente o reforzando las suyas propias. Los pequeños errores y omisiones pueden costarle muy caros.</para
+></listitem>
+      </itemizedlist>
+      </sect1>
+</chapter>
+
+<chapter id="interface"
+><title
+>Vista general de la interfaz</title
+> <!-- do not change this! -->
+<sect1 id="menus">
+<title
+>Los menús &kappname;</title>
+<para
+>&kappname; tiene menús &kde; de forma predeterminada, excepto para los siguientes elementos:</para>
+		<variablelist>
+			<varlistentry  id="game-menu-get-more">
+				<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>G</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Juego</guimenu
+> <guimenuitem
+>Obtener más juegos...</guimenuitem
+> </menuchoice
+></term>
+				<listitem
+><para
+><action
+>Abre un diálogo estándar &kde; KNewStuff para cargar juegos guardados por otros usuarios.</action
+></para
+></listitem>
+			</varlistentry>
+			<varlistentry id="game-menu-start">
+				<term
+><menuchoice
+><shortcut
+><keycap
+>S</keycap
+></shortcut
+> <guimenu
+>Juego</guimenu
+> <guimenuitem
+>Comenzar juego</guimenuitem
+> </menuchoice
+></term>
+				<listitem
+><para
+><action
+>Comienza</action
+> un juego nuevo o uno guardado.</para
+></listitem>
+			</varlistentry>
+			<varlistentry id="game-menu-finish">
+				<term
+><menuchoice
+><shortcut
+><keycap
+>F</keycap
+></shortcut
+> <guimenu
+>Juego</guimenu
+> <guimenuitem
+>Finalizar juego</guimenuitem
+> </menuchoice
+></term>
+				<listitem
+><para
+><action
+>Finaliza</action
+> el juego actual. Recuerde que terminar un juego de Go es siempre un paso cooperativo.</para
+></listitem>
+			</varlistentry>
+			<varlistentry id="move-menu-pass">
+				<term
+><menuchoice
+><shortcut
+><keycap
+>P</keycap
+></shortcut
+> <guimenu
+>Movimiento</guimenu
+> <guimenuitem
+>Pasar movimiento</guimenuitem
+> </menuchoice
+></term>
+				<listitem
+><para
+>Le permite <action
+>pasar</action
+> y no hacer su movimiento.</para
+></listitem>
+			</varlistentry>
+			<varlistentry id="move-menu-hint">
+				<term
+><menuchoice
+><shortcut
+><keycap
+>H</keycap
+></shortcut
+> <guimenu
+>Movimiento</guimenu
+> <guimenuitem
+>Pista</guimenuitem
+> </menuchoice
+></term>
+				<listitem
+><para
+><action
+>Da una pista</action
+> mostrando piezas transparentes con la puntuación sobre ellas.</para
+></listitem>
+			</varlistentry>
+			<varlistentry id="move-menu-numbers">
+				<term
+><menuchoice
+><shortcut
+><keycap
+>N</keycap
+></shortcut
+> <guimenu
+>Movimiento</guimenu
+> <guimenuitem
+>Mostrar números de movimiento</guimenuitem
+> </menuchoice
+></term>
+				<listitem
+><para
+><action
+>Activa o desactiva</action
+> la visibilidad de los números de movimiento.</para
+></listitem>
+			</varlistentry>
+			<varlistentry id="settings-menu-hide-docker">
+				<term
+><menuchoice
+><guimenu
+>Preferencias</guimenu
+> <guisubmenu
+>Puntos de anclaje</guisubmenu
+> <guimenuitem
+>Movimiento</guimenuitem
+> </menuchoice
+></term>
+				<listitem
+><para
+>Muestra u oculta la barra lateral de movimientos.</para
+></listitem>
+			</varlistentry>
+			<varlistentry id="settings-menu-settings">
+				<term
+><menuchoice
+><guimenu
+>Preferencias</guimenu
+> <guimenuitem
+>Configurar &kappname;...</guimenuitem
+> </menuchoice
+></term>
+				<listitem
+><para
+><action
+>Abre un diálogo para configurar &kappname;.</action
+> Ver la sección <link linkend="configuration"
+>Configuración del juego</link
+> para más detalles.</para
+></listitem>
+			</varlistentry>
+		</variablelist>
+<para
+>Además &kappname; tiene las opciones de menú <guimenu
+>Preferencias</guimenu
+> y <guimenu
+>Ayuda</guimenu
+> comunes de &kde;. Para obtener más información, consulte las secciones sobre el <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Menú «Preferencias»</ulink
+> y <ulink url="help:/fundamentals/menus.html#menus-help"
+>Menú «Ayuda» </ulink
+> de «Aspectos básicos de &kde;». </para>
+
+</sect1>
+
+<sect1 id="keybindings">
+<title id="keybindings-title"
+>Atajos de teclado</title>
+  <para
+>Los atajos de teclado predeterminados son:</para>
+
+  <table>
+  <title
+>Atajos de teclado</title>
+  <tgroup cols="2">
+  <tbody>
+  <row>
+    <entry
+>Terminar el juego actual</entry>
+    <entry
+><keycap
+>F</keycap
+></entry>
+  </row>
+  <row>
+    <entry
+>Obtener nuevos juegos subidos por otros usuarios</entry>
+    <entry>
+      <keycombo action="simul"
+>&Ctrl;<keycap
+>G</keycap
+></keycombo>
+    </entry>
+  </row>
+  <row>
+    <entry
+>Ayuda</entry>
+    <entry
+><keycap
+>F1</keycap
+></entry>
+   </row>
+  <row>
+    <entry
+>Cargar juego guardado</entry>
+    <entry>
+    <keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo>
+    </entry>
+  </row>
+  <row>
+    <entry
+>Pasar movimiento</entry>
+    <entry
+><keycap
+>P</keycap
+></entry>
+  </row>
+  <row>
+    <entry
+>Salir</entry>
+    <entry>
+    <keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo>
+    </entry>
+  </row>
+  <row>
+    <entry
+>Rehacer un movimiento que se había deshecho</entry>
+    <entry>
+      <keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>Z</keycap
+></keycombo>
+    </entry>
+  </row>
+  <row>
+    <entry
+>Guardar el juego actual</entry>
+    <entry>
+      <keycombo action="simul"
+>&Ctrl;<keycap
+>S</keycap
+></keycombo>
+    </entry>
+  </row>
+  <row>
+    <entry
+>Comenzar un juego nuevo</entry>
+    <entry>
+    <keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo>
+    </entry>
+  </row>
+  <row>
+    <entry
+>Iniciar un juego nuevo o guardado</entry>
+    <entry
+><keycap
+>S</keycap
+></entry>
+  </row>
+  <row>
+    <entry
+>Activa o desactiva la visibilidad de los números de movimiento.</entry>
+    <entry
+><keycap
+>N</keycap
+></entry>
+  </row>
+  <row>
+    <entry
+>Deshacer su último movimiento</entry>
+    <entry>
+      <keycombo action="simul"
+>&Ctrl;<keycap
+>Z</keycap
+></keycombo>
+    </entry>
+  </row>
+  <row>
+    <entry
+>¿Qué es esto?</entry>
+    <entry>
+    <keycombo action="simul"
+>&Shift;<keycap
+>F1</keycap
+></keycombo>
+    </entry>
+  </row>
+  </tbody>
+  </tgroup>
+  </table>
+</sect1>
+</chapter>
+
+<chapter id="configuration">
+<title
+>Configuración del juego</title
+> <!-- do not change this! -->
+<!--This section describes configuration GUI. If your game is configured using menubar exclusively, please remove this section.-->
+  <para
+>Si desea cambiar cómo &kappname; está configurado, puede hacerlo navegando por el menú <guimenu
+>Preferencias</guimenu
+> y haciendo click en la acción <guimenuitem
+>Configurar &kappname;...</guimenuitem
+>. </para>
+
+  <para
+>Debería ver ahora el diálogo de confirmación tal como se muestra en la captura de abajo. También puede obtenerlo presionando la combinación de teclas <keycombo
+>&Alt;<keycap
+>S</keycap
+></keycombo
+> seguida de <keycombo
+>&Alt;<keycap
+>C</keycap
+></keycombo
+>. </para>
+
+  <para
+>&kappname; es extremadamente flexible y puede personalizarse tanto como desee. Puede cambiar la posición y el tamaño de todos los widgets cerca del área central de juego. También puede personalizar la barra de herramientas si desea tener varias acciones accesibles desde allí. Para hacer esto, haga click en el menú <guimenu
+>Preferencias</guimenu
+> y elija <guimenuitem
+>Configurar barras de herramientas...</guimenuitem
+>. Lo mismo es posible para todos los atajos de teclado del juego. Si desea tener el máximo de espacio disponible para el campo de juego, puede incluso esconder la barra de herramientas y la mayoría de widgets de los anclajes en el menú <guimenu
+>Preferencias</guimenu
+>. </para>
+  <sect1 id="genconig">
+  <title
+>Configuración general</title>
+    <para
+>El aspecto más importante aquí es la configuración del motor de Go. &kappname; necesita un motor válido para funcionar correctamente. Como puede ver en la captura de pantalla de abajo, por defecto se utiliza GnuGo. La lucecita al lado del comando de motor está verde si todo funciona bien. Si no es el caso o si desea utilizar un motor de Go diferente, debería instalar otro motor de Go que pueda comunicarse en el protocolo de texto de GnuGo (GTP) y configure sus comandos y parámetros adecuadamente. Los detalles sobre este paso deberían encontrarse en la documentación del motor de Go correspondiente. </para>
+    <screenshot>
+    <screeninfo
+>Configuración general</screeninfo>
+    <mediaobject>
+    <imageobject
+><imagedata format="PNG" fileref="setup-general.png"/></imageobject>
+    <textobject
+><phrase
+>Configuración general</phrase
+></textobject>
+    </mediaobject>
+    </screenshot>
+    </sect1>
+    <sect1 id="configuration-theme">
+    <title
+>Configuración de temas</title>
+    <para
+>Esta página le permitirá cambiar el tema que usa &kappname;. </para>
+    <screenshot>
+    <screeninfo
+>Configurar &kappname; - Temas</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="setup-theme.png" format="PNG"/>
+	  </imageobject>
+	    <textobject>
+	    <phrase
+>Configuración de temas</phrase>
+	  </textobject>
+	</mediaobject>
+    </screenshot>
+    </sect1>
+</chapter>
+
+<chapter id="credits">
+
+<!-- Include credits for the programmers, documentation writers, and
+contributors here. The license for your software should then be included below
+the credits with a reference to the appropriate license file included in the KDE
+distribution. -->
+
+<title
+>Créditos y licencia</title>
+
+<para
+>&kigo; </para>
+<para
+>Copyright del programa 2009 Sascha Peilicke <email
+>sasch.pe@gmx.de</email
+> </para>
+
+<para
+>Copyright de la documentación 2009 Sascha Peilicke <email
+>sasch.pe@gmx.de</email
+> </para>
+
+<para
+>Edición de la documentación y conversión de Docbook por Yuri chornoivan <email
+>yurchor@ukr.net</email
+> </para>
+
+<para
+>Tema predeterminado diseñado por Arturo Silva <email
+>jasilva28@gmail.com</email
+> </para>
+
+<para
+>Traducido por Rocío Gallego <email
+>traducciones@rociogallego.com</email
+> y Kira J. Fernández <email
+>kirajfdez@gmail.com</email
+>.</para
+> &underFDL; &underGPL; </chapter>
+
+<appendix id="installation">
+<title
+>Instalación</title>
+
+<sect1 id="getting-kapp">
+<title
+>Cómo obtener &kigo;</title
+>&install.intro.documentation; &install.compile.documentation; </sect1>
+
+<sect1 id="compilation">
+<title
+>Compilación e instalación</title
+>&install.compile.documentation; </sect1>
+
+</appendix>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-omittag: nil
+sgml-shorttag: t
+sgml-general-insert-case: lower
+End:
+-->
+

@@ -1,0 +1,213 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: kigo
+Upstream-Contact: Albert Astals Cid <aacid@kde.org>
+                  Wolfgang Rohdewald <wolfgang@rohdewald.de>
+Source: http://www.kde.org/download/
+License: GPL-2+
+
+Files: *
+Copyright: 2010, Rosetta Contributors and Canonical Ltd 2010
+           2008-2010, Sascha Peilicke <sasch.pe@gmx.de>
+           2002, Lukáš Tinkl <ltinkl@redhat.com>
+           2011-2017, Vít Pelčák <vit@pelcak.org>
+           2012, Tomáš Chvátal <tomas.chvatal@gmail.com>
+           2010-2012, Martin Schlander <mschlander@opensuse.org>
+           2012, Claus Christensen <claus_chr@webspeed.dk>
+           2017, scootergrisen
+           2008-2017, Burkhard Lück <lueck@hube-lueck.de>
+           2009-2010, Johannes Obermayr <johannesobermayr@gmx.de>
+           2009, Panagiotis Papadopoulos <pano_90@gmx.net>
+           2010, Thomas Reitelbach <tr@erdfunkstelle.de>
+           2011-2016, Frederik Schwarzer <schwarzer@kde.org>
+           2012, Jonas Schürmann <jonasschuermann@aol.de>
+           2008-2009, Toussis Manolis <manolis@koppermind.homelinux.org>
+           2009, Petros Vidalis <p_vidalis@hotmail.com>
+           2009-2010, Andrew Coles <andrew_coles@yahoo.co.uk>
+           2014-2017, Steve Allewell <steve.allewell@gmail.com>
+           2009, Axel Rousseau <axel@esperanto-jeunes.org>
+           2008, Santi <santi@kde-es.org>
+           2009, Huever
+           2010-2012, Kira J. Fernandez <kirajfdez@gmail.com>
+           2016-2017, Eloy Cuadra <ecuadra@eloihr.net>
+           2008-2012, Marek Laane <bald@smail.ee>
+           2011-2018, Tommi Nieminen <translator@legisign.org>
+           2011-2013, Lasse Liehu <lasse.liehu@gmail.com>
+           2008-2009, Stanislas Zeller <uncensored.assault@gmail.com>
+           2009-2010, Mickael Sibelle <kimael@gmail.com>
+           2013, Maxime Corteel <maxime.corteel@gadz.org>
+           2017, Simon Depiets <sdepiets@gmail.com>
+           2009, Kevin Scannell <kscanne@gmail.com>
+           2008-2014, Marce Villarino <mvillarino@users.sourceforge.net>
+           2009-2012, Xosé <xosecalvo@gmail.com>
+           2017-2018, Adrián Chaves (Gallaecio) <adrian@chaves.io
+           2010, Andrej Dundovic <adundovi@gmail.com>
+           2010, Laszlo Papp <djszapi@archlinux.us>
+           2010-2011, Kristóf Kiszel <ulysses@kubuntu.org>
+           2012, Balázs Úr <urbalazs@gmail.com>
+           2012-2015, Sveinn í Felli <sveinki@nett.is>
+           2009-2017, Valter Mura <valtermura@gmail.com>
+           2009-2010, Yukiko Bando <ybando@k6.dion.ne.jp>
+           2012-2013, Sairan Kikkarin <sairan@computer.org>
+           2009, Khoem Sokhem <khoemsokhem@khmeros.info>
+           2009, Morn Met
+           2019, Shinjo Park <kde@peremen.name>
+           2019, Jaehoon Lee <jaehoon1108@naver.com>
+           2019, JungHee Lee <daemul72@gmail.com>
+           2009, Andrius Štikonas <andrius@stikonas.eu>
+           2011, Remigijus Jarmalavičius <remigijus@jarmalavicius.lt>
+           2010-2012, Einars Sprugis <einars8@gmail.com>
+           2013, Chetan Khona <chetan@kompkin.com>
+           2010-2012, Bjørn Steensrud <bjornst@skogkatt.homelinux.org>
+           2008-2014, Sönke Dibbern <s_dibbern@web.de>
+           2008-2011, Manfred Wiese <m.j.wiese@web.de>
+           2009-2017, Freek de Kruijf <freekdekruijf@kde.nl>
+           2014, Jaap Woldringh <jjhwoldringh@kde.nl>
+           2010-2017, Karl Ove Hufthammer <karl@huftis.org>
+           2009-2010, Maciej Wikło <maciej.wiklo@wp.pl>
+           2011-2017, Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+           2017, José Nuno Coelho Pires <zepires@gmail.com>
+           2008-2017, Luiz Fernando Ranghetti <elchevive@opensuse.org>
+           2010-2012, André Marcelo Alvarenga <alvarenga@kde.org>
+           2010, Sergiu Bivol <sergiu.bivol@jurnaltv.md>
+           2010-2013, Artem Sereda <overmind88@gmail.com>
+           2010-2018, Alexander Potashev <aspotashev@gmail.com>
+           2013, Alexander Lakhin <exclusion@gmail.com>
+           2009, Richard Fric <Richard.Fric@kdemail.net>
+           2012-2017, Roman Paholík <wizzardsk@gmail.com>
+           2012-2017, Andrej Mernik <andrejm@ubuntu.si>
+           2009-2017, Chusslove Illich <caslav.ilic@gmx.net>
+           2010, Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>
+           2010, Slobodan Simic <slsimic@gmail.com>
+           2008-2017, Stefan Asserhäll <stefan.asserhall@bredband.net>
+           2010, H. İbrahim Güngör <ibrahim@pardus.org.tr>
+           2008, Osman Tosun <rainman.neu@gmail.com>
+           2008-2009, obsoleteman <tulliana@gmail.com>
+           2009, Serhat Demirkol <serhat_demirkol@yahoo.com>
+           2013, Volkan Gezer <volkangezer@gmail.com>
+           2011, Sahran <sahran.ug@gmail.com>
+           2010, Ni Hui <shuizhuyuanluo@126.com>
+           2010, Leon Feng <rainofchaos@gmail.com>
+           2013, Weng Xuetian <wengxt@gmail.com>
+           2011, Alisha <alisha.4m@gmail.com>
+           2009-2012, Franklin Weng <franklin@mail.everfocus.com.tw>
+           2017, Jeff Huang <s8321414@gmail.com>
+License: GPL-2+
+
+Files: src/game/*
+       src/gui/config/generalconfig.cpp
+       src/gui/config/generalconfig.h
+       src/gui/graphicsview/*
+       src/gui/mainwindow.cpp
+       src/gui/mainwindow.h
+       src/gui/widgets/errorwidget.cpp
+       src/gui/widgets/errorwidget.h
+       src/gui/widgets/gamewidget.cpp
+       src/gui/widgets/gamewidget.h
+       src/gui/widgets/setupwidget.cpp
+       src/gui/widgets/setupwidget.h
+       src/main.cpp
+Copyright: 2008-2010, Sascha Peilicke <sasch.pe@gmx.de>
+License: GPL-2+3+KDEeV
+
+Files: doc/*
+       po/de/docs/*
+       po/es/docs/*
+       po/et/docs/*
+       po/fr/docs/*
+       po/it/docs/*
+       po/nl/docs/*
+       po/pt/docs/*
+       po/pt_BR/docs/*
+       po/ru/docs/*
+       po/sv/docs/*
+       po/uk/docs/*
+Copyright: 2008-2010, Sascha Peilicke <sasch.pe@gmx.de>
+License: GFDL-1.2+
+
+Files: po/ca/*
+       po/ca@valencia/*
+       po/uk/kigo.po
+Copyright: 2009-2010, Manuel Tortosa Moreno <manutortosa@gmail.com>
+           2010-2017, Josep Ma. Ferrer <txemaq@gmail.com>
+           2008-2017, Yuri Chornoivan <yurchor@ukr.net>
+License: LGPL-2.1+3+KDEeV
+
+Files: src/gui/org.kde.kigo.appdata.xml
+Copyright: 2017, Burkhard Lück <lueck@hube-lueck.de>
+License: FSFAP
+
+Files: debian/*
+Copyright: 2007-2013, Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+License: GPL-2+
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation; either version 2 of
+ the License or (at your option) version 3 or any later version
+ accepted by the membership of KDE e.V. (or its successor approved
+ by the membership of KDE e.V.), which shall act as a proxy
+ defined in Section 14 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+
+License: GFDL-1.2+
+ Permission is granted to copy, distribute and/or modify this document
+ under the terms of the GNU Free Documentation License, Version 1.2
+ or any later version published by the Free Software Foundation;
+ with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+ A copy of the license is included in the section entitled "GNU
+ Free Documentation License".
+ .
+ On Debian systems, the complete text of the GNU Free Documentation
+ License version 1.2 can be found in "/usr/share/common-licenses/GFDL-1.2".
+
+License: GPL-2+3+KDEeV
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License as
+ published by the Free Software Foundation; either version 2 of
+ the License or (at your option) version 3 or any later version
+ accepted by the membership of KDE e.V. (or its successor approved
+ by the membership of KDE e.V.), which shall act as a proxy
+ defined in Section 14 of version 3 of the license.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 3 can be found in "/usr/share/common-licenses/GPL-3".
+
+License: LGPL-2.1+3+KDEeV
+ This file is distributed under the license LGPL version 2.1 or
+ version 3 or later versions approved by the membership of KDE e.V.
+ .
+ On Debian systems, the full text of the GNU Library General Public
+ License version 2.1 can be found in the file
+ `/usr/share/common-licenses/LGPL-2.1'.
+ .
+ On Debian systems, the full text of the GNU Library General Public
+ License version 3 can be found in the file
+ `/usr/share/common-licenses/LGPL-3'.
+
+License: FSFAP
+ Copying and distribution of this file, with or without modification,
+ are permitted in any medium without royalty provided the copyright
+ notice and this notice are preserved. This file is offered as-is, without
+ any warranty.
